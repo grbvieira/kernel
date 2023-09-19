@@ -649,10 +649,10 @@ void jsqz_task_schedule(struct jsqz_task *task)
 	jsqz_device->current_task = task;
 	spin_unlock_irqrestore(&jsqz_device->lock_task, flags);
 
-    if (task->type == JPEG_SQZ)
-        ret = jsqz_run_sqz(task->ctx, task);
-    else if (task->type == MPEG_SQZ)
-        ret = jsqz_run_msqz(task->ctx, task);
+	if (task->type == JPEG_SQZ)
+	ret = jsqz_run_sqz(task->ctx, task);
+	else if (task->type == MPEG_SQZ)
+	ret = jsqz_run_msqz(task->ctx, task);
 
 	if (ret) {
 		task->state = JSQZ_BUFSTATE_ERROR;
@@ -2499,4 +2499,3 @@ builtin_platform_driver(jsqz_driver);
 MODULE_AUTHOR("Jungik Seo <jungik.seo@samsung.com>");
 MODULE_DESCRIPTION("Samsung JPEG SQZ Driver");
 MODULE_LICENSE("GPL");
-
