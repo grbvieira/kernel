@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=leanKernel by chrisaw @ xda-developers
+kernel.string=Note 20 Ultra 5G Kernel by grbvieira @ xda-developers
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
