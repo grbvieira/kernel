@@ -321,7 +321,7 @@ include scripts/subarch.include
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
 ARCH		?= $(SUBARCH)
 ARCH            ?= arm64
-CROSS_COMPILE	?=/home/noosreg/kernel/gcc/bin/aarch64-linux-android-
+CROSS_COMPILE	?=/home/noosreg/kernel/toolchain/gcc-cfp/gcc-cfp-jopp-only/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
@@ -373,7 +373,7 @@ KBUILD_HOSTLDLIBS   := $(HOST_LFS_LIBS) $(HOSTLDLIBS)
 AS		= $(CROSS_COMPILE)as
 LD		= $(CROSS_COMPILE)ld
 #CC		= $(CROSS_COMPILE)gcc
-CC              =/home/noosreg/kernel/clang/clang-r416183b/bin/clang
+CC              =/home/noosreg/kernel/toolchain/clang/host/linux-x86/clang-r349610/bin/clang
 CPP		= $(CC) -E
 AR		= $(CROSS_COMPILE)ar
 NM		= $(CROSS_COMPILE)nm
